@@ -234,5 +234,65 @@ Exemplo: Entrada:<br>
     echo "<br>-----------------------------------------------------------------------------------------------------------<br>";
 
 //-----------------------------------------------------------------------------------------------------------
+//Corrigir
+// echo "<strong>Exercício 9 <br>
+// Dado x, y e array encontre a distância mínima entre x e y dentro de um array <br>
+// Exemplo: Entrada:<br>
+        
+//         vetor[ ] = {7, 9, 11, 10, 2, 4, 10, 50, 10} <br>
+//         X = 7 <br>
+//         y = 10 <br>
+       
+
+//     <br>Resultado: <br>
+//     </strong>";
+//     $vetorEx9 = [7, 9, 11, 10, 2, 4, 10, 50, 10];
+//     $tamVet9 = count($vetorEx9);
+//     $x = 7;
+//     $y = 10;
+//     $menorDistancia = 0;
+//     $cont = 0;
+
+//     for ($i=0; $i<$tamVet9 ; $i++){
+//         if ($tamVet9[$i] == $x && $tamVet9[$i] != $y){
+//             $cont++;
+//         }
+
+        
+//     }
+
+//     echo "Menor distância = " . $menorDistancia;
+    
+//     echo "<br>-----------------------------------------------------------------------------------------------------------<br>";
+
+//-----------------------------------------------------------------------------------------------------------
+echo "<strong>Exercício 10 <br>
+Dado um valor em x e um array de inteiros, efetue a contagem de frequência de elementos no array, <br>começando no valor 1 até o valor de x. <br>
+Exemplo: Entrada:<br>
+        
+        vetor[ ] = {13, 4, 20, 10, 50} <br>
+       
+
+    <br>Resultado: <br>
+    </strong>";
+
+    $vet10 = [13, 4, 20, 10, 50] ;
+    $visualizam = [];
+    $visualizam[] = $vet10[0];
+    $tamVet10 = count($vet10);
+    for ($i=0; $i<$tamVet10 ; $i++){
+        if ($i != $tamVet10 -1){
+            if($vet10[$i+1] > $vet10[$i]){
+                $visualizam[] = $vet10[$i+1];
+            }
+        }
+    }
+
+    echo "Edifícios que visualizam a antena = ";
+    $tamVisualizam = count($visualizam);
+    for ($i=0; $i<$tamVisualizam ; $i++){
+        echo $visualizam[$i] . " ";
+    }
+
 ?>
 
