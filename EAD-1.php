@@ -183,7 +183,55 @@ Exemplo: Entrada:<br>
 
 //-----------------------------------------------------------------------------------------------------------
 
+echo "<strong>Exercício 8 <br>
+Dado um valor em x e um array de inteiros, efetue a contagem de frequência de elementos no array, <br>começando no valor 1 até o valor de x. <br>
+Exemplo: Entrada:<br>
+        
+        vetor[ ] = {3, 4, 3, 4, 5, 5, 5, 6, 7, 7, 6, 5} <br>
+        X = 5 <br>
+       
 
+    <br>Resultado: <br>
+    </strong>";
+    $vetorEx8 = [3, 4, 3, 4, 5, 5, 5, 6, 7, 7, 6, 5];
+    $tamVet8 = count($vetorEx8);
+    $x1 = 1;
+    $x2 = 2;
+    $x3 = 3;
+    $x4 = 4;
+    $x5 = 5;
+    $cont1 = 0;
+    $cont2 = 0;
+    $cont3 = 0;
+    $cont4 = 0;
+    $cont5 = 0;
+
+    for ($i=0; $i<$tamVet8 ; $i++){
+        if($x1 == $vetorEx8[$i]){
+            $cont1++;
+        }
+        else if($x2 == $vetorEx8[$i]){
+            $cont2++;
+        }
+        else if($x3 == $vetorEx8[$i]){
+            $cont3++;
+        }
+        else if($x4 == $vetorEx8[$i]){
+            $cont4++;
+        }
+        else if($x5 == $vetorEx8[$i]){
+            $cont5++;
+        }
+    }
+
+    echo "Frequência: <br>";
+    echo $x1 . " = " . $cont1 . " vezes <br>";
+    echo $x2 . " = " . $cont2 . " vezes <br>";
+    echo $x3 . " = " . $cont3 . " vezes <br>";
+    echo $x4 . " = " . $cont4 . " vezes <br>";
+    echo $x5 . " = " . $cont5 . " vezes <br>";
+    
+    echo "<br>-----------------------------------------------------------------------------------------------------------<br>";
 
 //-----------------------------------------------------------------------------------------------------------
 ?>
