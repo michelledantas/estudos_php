@@ -4,7 +4,8 @@
 
 echo "<br>-----------------------------------------------------------------------------------------------------------<br>";
 echo "<strong>Exercício 1 <br>
-Encontre e exiba o elemento mínimo e máximo em um array. O array deve ser inicializada na programação.<br>
+Encontre e exiba o elemento mínimo e máximo em um array. <br>
+O array deve ser inicializada na programação.<br>
 EX: Entrada:<br>
     vetor[ ] = {7, 5, 3, 60, 800,555}<br>
     <br>Resultado: <br>
@@ -29,7 +30,8 @@ echo "<br>----------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------------------
 
 echo "<strong>Exercício 2 <br>
-Remova os elementos duplicados de um array informado e exiba o vetor resultante. O array deve ser inicializada na programação. <br>
+Remova os elementos duplicados de um array informado e exiba o vetor resultante. <br>
+O array deve ser inicializada na programação. <br>
 Exemplos: <br>
 Entrada: <br>
 vetor[ ] = {7, 7, 7,7} <br>
@@ -51,7 +53,8 @@ echo "<br>----------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------------------
 
 echo "<strong>Exercício 3 <br>
-Exiba o primeiro e segundo maior elemento de um array. O array deve ser inicializada na programação<br>
+Exiba o primeiro e segundo maior elemento de um array. <br>
+O array deve ser inicializada na programação<br>
 EX: Entrada:<br>
     vetor[ ] = {7, 5, 300, 60, 800, 73} <br>
     <br>Resultado: <br>
@@ -71,25 +74,35 @@ EX: Entrada:<br>
 
     echo "<br>-----------------------------------------------------------------------------------------------------------<br>";
 //-----------------------------------------------------------------------------------------------------------
+//CORRIGIR
+// echo "<br><strong>Exercício 4 <br>
+// Encontre e exiba a quantidade de conjuntos, e seus três valores, que podem ser formados com os elementos de um array.
+// Exemplos: Entrada:<br>
+//     vetor[ ] = {7, 9, 11} <br>
+//     vetor[ ] = {7, 9, 11, 20, 55} <br>
+//     <br>Resultado: <br>
+//     </strong>";
+//     $vet1 = [7, 9, 11];
+//     $vet2 = [7, 9, 11, 20, 55];
+//     $tam = count($vet1);
+//     $numeroDeConjuntos = 0;
+//     $elementos = [];
+//     $conjunto = [];
 
-echo "<br><strong>Exercício 4 <br>
-Encontre e exiba a quantidade de conjuntos, e seus três valores, que podem ser formados com os elementos de um array.
-Exemplos: Entrada:<br>
-    vetor[ ] = {7, 9, 11} <br>
-    vetor[ ] = {7, 9, 11, 20, 55} <br>
-    <br>Resultado: <br>
-    </strong>";
-    $vet1 = [7, 9, 11];
-    $vet2 = [7, 9, 11, 20, 55];
+//     for ($i=0; $i<$tam ; $i+2){
+//         $elementos[] = $vet1[$i], $vet1[$i+] 
+//         $conjunto[] = $elementos;
+//     }
+//     echo "Conjunto(s): " . $conjunto;
     
-    $numeroDeConjuntos = 0;
-    $elementos = [];
-    
-    echo "<br>-----------------------------------------------------------------------------------------------------------<br>";
-    //-----------------------------------------------------------------------------------------------------------
+//     echo "<br>-----------------------------------------------------------------------------------------------------------<br>";
+
+//-----------------------------------------------------------------------------------------------------------
     
 echo "<strong>Exercício 5 <br>
-Encontre e exiba os valores lideres de um array. Um elemento é considerado líder se for maior ou igual aos elementos a sua esquerda. O último elemento do array, o mais a direita, é considerado um líder.
+Encontre e exiba os valores lideres de um array. <br>
+Um elemento é considerado líder se for maior ou igual aos elementos a sua esquerda. <br>
+O último elemento do array, o mais a direita, é considerado um líder. <br>
 Exemplo: Entrada:<br>
     vetor[ ] = {7, 9, 11, 1, 2, 4,0} <br>
 
@@ -110,7 +123,68 @@ Exemplo: Entrada:<br>
     echo "Líderes: ";
     print_r($vetor_lideres);
     
-    
+    echo "<br>-----------------------------------------------------------------------------------------------------------<br>";
 
+//-----------------------------------------------------------------------------------------------------------
+
+echo "<strong>Exercício 6 <br>
+Encontre e exiba os valores lideres de um array. <br>
+Um elemento é considerado líder se for maior ou igual aos elementos a sua esquerda. <br>
+O último elemento do array, o mais a direita, é considerado um líder. <br>
+Piso de x é definido como o maior elemento K em arr [ ] tal que K é menor ou igual a x.<br>
+Exemplo: Entrada:<br>
+        
+        vetor[ ] = {0, 1, 2, 4, 7, 9, 11} <br>
+        X = 6; <br>
+
+    <br>Resultado: <br>
+    </strong>";
+    $vetorEx5 = [0, 1, 2, 4, 7, 9, 11];
+    $tam = count($vetorEx5);
+    $x = 6;
+    $piso = 0;
+
+    for ($i=0; $i<$tam ; $i++){
+        if ($vetorEx5[$i] <= $x ){
+            $piso = $vetorEx5[$i];
+        }
+    }
+
+    echo "O maior número menor que: " . $x . " é o " . $piso . ".";
+    
+    echo "<br>-----------------------------------------------------------------------------------------------------------<br>";
+
+//-----------------------------------------------------------------------------------------------------------
+
+echo "<strong>Exercício 7 <br>
+Dado um valor x encontre o número de ocorrências desse x em um array ordenado. <br>
+Exemplo: Entrada:<br>
+        
+        vetor[ ] = {1, 2, 4, 5, 5, 5, 5, 7, 11} <br>
+        X = 5 <br>
+       
+
+    <br>Resultado: <br>
+    </strong>";
+    $vetorEx7 = [1, 2, 4, 5, 5, 5, 5, 7, 11];
+    $tam = count($vetorEx7);
+    $x = 5;
+    $cont = 0;
+
+    for ($i=0; $i<$tam ; $i++){
+        if ($vetorEx7[$i] == $x ){
+            $cont++;
+        }
+    }
+
+    echo "Número de ocorrências de " . $x . " = " . $cont . " vezes.";
+    
+    echo "<br>-----------------------------------------------------------------------------------------------------------<br>";
+
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+//-----------------------------------------------------------------------------------------------------------
 ?>
 
