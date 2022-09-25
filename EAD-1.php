@@ -69,11 +69,48 @@ EX: Entrada:<br>
     echo "<br>primeiroMaiorElemento: " . $primeiroMaiorElemento;
     echo "<br>segundoMaiorElemento: " . $segundoMaiorElemento;
 
-
+    echo "<br>-----------------------------------------------------------------------------------------------------------<br>";
 //-----------------------------------------------------------------------------------------------------------
 
+echo "<br><strong>Exercício 4 <br>
+Encontre e exiba a quantidade de conjuntos, e seus três valores, que podem ser formados com os elementos de um array.
+Exemplos: Entrada:<br>
+    vetor[ ] = {7, 9, 11} <br>
+    vetor[ ] = {7, 9, 11, 20, 55} <br>
+    <br>Resultado: <br>
+    </strong>";
+    $vet1 = [7, 9, 11];
+    $vet2 = [7, 9, 11, 20, 55];
+    
+    $numeroDeConjuntos = 0;
+    $elementos = [];
+    
+    echo "<br>-----------------------------------------------------------------------------------------------------------<br>";
+    //-----------------------------------------------------------------------------------------------------------
+    
+echo "<strong>Exercício 5 <br>
+Encontre e exiba os valores lideres de um array. Um elemento é considerado líder se for maior ou igual aos elementos a sua esquerda. O último elemento do array, o mais a direita, é considerado um líder.
+Exemplo: Entrada:<br>
+    vetor[ ] = {7, 9, 11, 1, 2, 4,0} <br>
 
+    <br>Resultado: <br>
+    </strong>";
+    $vetorEx4 = [7, 9, 11, 1, 2, 4,0];
+    $tam = count($vetorEx4);
+    $lider = 0;
+    $vetor_lideres = [];
 
+    for ($i=0; $i<$tam ; $i++){
+        if ($vetorEx4[$i] > $lider && $vetorEx4[$i+1] < $vetorEx4[$i] ){
+            $vetor_lideres[] = $vetorEx4[$i];
+        }
+    }
+    $vetor_lideres[] = $vetorEx4[$tam-1];
+
+    echo "Líderes: ";
+    print_r($vetor_lideres);
+    
+    
 
 ?>
 
