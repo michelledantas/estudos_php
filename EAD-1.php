@@ -3,7 +3,7 @@
 //-----------------------------------------------------------------------------------------------------------
 
 echo "<br>-----------------------------------------------------------------------------------------------------------<br>";
-echo "<strong>Exercício 1 <br>
+echo "<strong>Exercício 1 <br><br>
 Encontre e exiba o elemento mínimo e máximo em um array. <br>
 O array deve ser inicializada na programação.<br>
 EX: Entrada:<br>
@@ -29,7 +29,7 @@ echo "<br>----------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------------------------------------
 
-echo "<strong>Exercício 2 <br>
+echo "<strong>Exercício 2 <br><br>
 Remova os elementos duplicados de um array informado e exiba o vetor resultante. <br>
 O array deve ser inicializada na programação. <br>
 Exemplos: <br>
@@ -75,27 +75,56 @@ EX: Entrada:<br>
     echo "<br>-----------------------------------------------------------------------------------------------------------<br>";
 //-----------------------------------------------------------------------------------------------------------
 //CORRIGIR
-// echo "<br><strong>Exercício 4 <br>
-// Encontre e exiba a quantidade de conjuntos, e seus três valores, que podem ser formados com os elementos de um array.
-// Exemplos: Entrada:<br>
-//     vetor[ ] = {7, 9, 11} <br>
-//     vetor[ ] = {7, 9, 11, 20, 55} <br>
-//     <br>Resultado: <br>
-//     </strong>";
-//     $vet1 = [7, 9, 11];
-//     $vet2 = [7, 9, 11, 20, 55];
-//     $tam = count($vet1);
-//     $numeroDeConjuntos = 0;
-//     $elementos = [];
-//     $conjunto = [];
-
-//     for ($i=0; $i<$tam ; $i+2){
-//         $elementos[] = $vet1[$i], $vet1[$i+] 
-//         $conjunto[] = $elementos;
-//     }
-//     echo "Conjunto(s): " . $conjunto;
+echo "<br><strong>Exercício 4 <br>
+Encontre e exiba a quantidade de conjuntos, e seus três valores, que podem ser formados com os elementos de um array.
+Exemplos: Entrada:<br>
+    vetor[ ] = {7, 9, 11} <br>
+    vetor[ ] = {7, 9, 11, 20, 55} <br>
+    <br>Resultado: <br>
+    </strong>";
+    $vet1 = [7, 9, 11];
+    $contVet1 = 0;
     
-//     echo "<br>-----------------------------------------------------------------------------------------------------------<br>";
+    $vet2 = [7, 9, 11, 20, 55];
+    $contVet2 = 0;
+    
+    $tamVet1 = count($vet1);
+    $tamVet2 = count($vet2);
+
+    $conjuntosVet1=0;
+    $conjuntosVet2=0;
+
+    echo "Vetor[] = [7, 9, 11] <br><br>";
+    for ($i=0; $i<=$tamVet1; $i++){
+        if($i <= $tamVet1 -3){
+            $contVet1 = $i +2;
+
+            for($contVet1; $contVet1 < $tamVet1; $contVet1++){
+                if($vet1[$i] != $vet1[$i+1] && $vet1[$contVet1] != $vet1[$i+1] && $vet1[$i] != $vet1[$contVet1]){
+                    $conjuntosVet1++;
+                    echo "Conjuntos: " . $vet1[$i] . ", " . $vet1[$i+1] . ", " . $vet1[$contVet1] . "<br>"; 
+                }
+            }
+        }
+    }
+    echo "Número de conjuntos vetor : " . $conjuntosVet1 . "<br><br>";
+
+    echo "Vetor[ ] = [7, 9, 11, 20, 55] <br><br>";
+    for ($i=0; $i<=$tamVet2; $i++){
+        if($i <= $tamVet2 -3){
+            $contVet2 = $i +2;
+
+            for($contVet2; $contVet2 < $tamVet2; $contVet2++){
+                if($vet2[$i] != $vet2[$i+1] && $vet2[$contVet2] != $vet2[$i+1] && $vet2[$i] != $vet2[$contVet2]){
+                    $conjuntosVet2++;
+                    echo "Conjuntos: " . $vet2[$i] . ", " . $vet2[$i+1] . ", " . $vet2[$contVet2] . "<br>"; 
+                }
+            }
+        }
+    }
+    echo "Número de conjuntos vetor : " . $conjuntosVet2 . "<br>";
+    
+    echo "<br>-----------------------------------------------------------------------------------------------------------<br>";
 
 //-----------------------------------------------------------------------------------------------------------
     
@@ -177,7 +206,7 @@ Exemplo: Entrada:<br>
         }
     }
 
-    echo "Número de ocorrências de " . $x . " = " . $cont . " vezes.";
+    echo "Quantidade de ocorrências do nº " . $x . " = " . $cont . " vezes.";
     
     echo "<br>-----------------------------------------------------------------------------------------------------------<br>";
 
@@ -234,36 +263,31 @@ Exemplo: Entrada:<br>
     echo "<br>-----------------------------------------------------------------------------------------------------------<br>";
 
 //-----------------------------------------------------------------------------------------------------------
-//Corrigir
-// echo "<strong>Exercício 9 <br>
-// Dado x, y e array encontre a distância mínima entre x e y dentro de um array <br>
-// Exemplo: Entrada:<br>
+echo "<strong>Exercício 9 <br>
+Dado x, y e array encontre a distância mínima entre x e y dentro de um array <br>
+Exemplo: Entrada:<br>
         
-//         vetor[ ] = {7, 9, 11, 10, 2, 4, 10, 50, 10} <br>
-//         X = 7 <br>
-//         y = 10 <br>
+        vetor[ ] = {7, 9, 11, 10, 2, 4, 10, 50, 10} <br>
+        X = 7 <br>
+        y = 10 <br>
        
 
-//     <br>Resultado: <br>
-//     </strong>";
-//     $vetorEx9 = [7, 9, 11, 10, 2, 4, 10, 50, 10];
-//     $tamVet9 = count($vetorEx9);
-//     $x = 7;
-//     $y = 10;
-//     $menorDistancia = 0;
-//     $cont = 0;
+    <br>Resultado: <br>
+    </strong>";
+    $vetorEx9 = [7, 9, 11, 10, 2, 4, 10, 50, 10];
+    $tamVet9 = count($vetorEx9);
+    $x = 7;
+    $y = 10;
+    $menorDistancia = 0;
+    $cont = 0;
 
-//     for ($i=0; $i<$tamVet9 ; $i++){
-//         if ($tamVet9[$i] == $x && $tamVet9[$i] != $y){
-//             $cont++;
-//         }
+    for ($i=0; $i<$tamVet9 ; $i++){
+        $menorDistancia = abs($y-$x);   
+    }
 
-        
-//     }
-
-//     echo "Menor distância = " . $menorDistancia;
+    echo "Menor distância = " . $menorDistancia;
     
-//     echo "<br>-----------------------------------------------------------------------------------------------------------<br>";
+    echo "<br>-----------------------------------------------------------------------------------------------------------<br>";
 
 //-----------------------------------------------------------------------------------------------------------
 echo "<strong>Exercício 10 <br>
