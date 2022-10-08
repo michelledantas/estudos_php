@@ -1,4 +1,19 @@
+
+
 <?php
+
+// Obtenha as classe e atributos do modelo descritivo abaixo
+// e as implemente em um programa. Crie um botão para
+// atribuir valores aos atributos de cada classe encontrada.
+// Uma maternidade deseja informatizar suas operações.
+// Quando um bebê nasce, algumas informações são
+// armazenadas sobre ele, tais como: nome, data do nascimento,
+// peso do nascimento, altura, a mãe deste bebê e o médico que
+// fez seu parto.
+// Para as mães, o berçário também deseja manter um controle,
+// guardando informações como: nome, endereço, telefone e data
+// de nascimento. Para os médicos, é importante saber: CRM,
+// nome, telefone celular e especialidade.
 
 class Bebe{
     private $nomeBebe;
@@ -20,11 +35,6 @@ class Bebe{
         if (empty($dataNascBebe)){
             throw new Error("A data de nascimento deve ser informada");
         }
-        $anoAtual = date("Y");
-
-        // if($dataNascBebe > $anoAtual){
-        //     throw new Error("A data informada é inválida.");
-        // }
         $this->dataNascBebe = $dataNascBebe;
     }
 
@@ -57,6 +67,13 @@ class Bebe{
 
     public function getAltura(){
         return $this->altura;
+    }
+
+    function imprimirDadosBebe(){
+        echo "Nome do bebê: $this->nomeBebe <br>";
+        echo "Data de nascimento: $this->dataNascBebe <br>";
+        echo "Peso do nascimento: $this->peso <br>";
+        echo "Altura do bebê: $this->altura <br>";
     }
     
 }
@@ -109,6 +126,17 @@ class Mae{
             throw new Error("A data de nascimento da mãe deve ser informada");
         }
         $this->dataNascMae = $dataNascMae;
+    }
+
+    function imprimirNomeDaMae(){
+        echo "Nome da mãe: $this->nomeMae <br>";
+    }
+
+    function imprimirRegistroBercario(){
+        echo "Nome da mãe: $this->nomeMae <br>";
+        echo "Data de nascimento: $this->dataNascBebe <br>";
+        echo "Peso do nascimento: $this->peso <br>";
+        echo "Altura do bebê: $this->altura <br>";
     }
 
 }
@@ -177,7 +205,38 @@ class Medico{
         }
         $this->especialidade = $especialidade;
     }
+
+    function imprimirNomeDoMedico(){
+        echo "Nome do médico: $this->nomeMedico <br>";
+    }
 }
 
+try{
+    
+    $bebe = new Bebe;
+    $mae = new Mae;
+    $medico = new Medico;
+
+    $bebe->setNomeBebe("Manuela");
+    $bebe->setDataNascBebe("27/08/2019");
+    $bebe->setPeso("2,755kkg");
+    $bebe->setAltura("47 cm");
+
+    $mae->setNomeMae("Michelle");
+    
+    $medico->setNomeMedico("Mariana");
+
+
+    $bebe->imprimirDadosBebe();
+    $mae->imprimirNomeDaMae();
+    $medico->imprimirNomeDoMedico();
+
+    //segura a execução por 10 segundos
+    sleep(10);
+
+} catch (Error $ex) {
+    echo "<h2> Exceção </h2>";
+    echo "<p> <br>". $ex->getMessage() . "</b></p>";
+}
 
 ?>
