@@ -31,9 +31,13 @@ class Aluno{
     }
 
     public function setP1($p1){
-        if (empty($p1) || $p1 <0 || $p1 >10){
+        if (empty(is_numeric($p1))){
             throw new Error("A nota da P1 não pode ser menor que 0 e maior que 10");
         }
+        if (is_numeric($p1) <0  || is_numeric($p1) >10){
+            throw new Error("A nota da P1 não pode ser menor que 0 e maior que 10");
+        }
+
         $this->p1 = $p1;
 
     }
@@ -84,7 +88,7 @@ try{
     //$aluno->setP1(11);*/
 
     /*Testando a quarta regra de negócio*/
-    $aluno->setP2(11);
+    $aluno->setP1(0);
     $aluno->imprimir();
     //$aluno->setP2(11);
 
